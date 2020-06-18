@@ -18,6 +18,7 @@ import com.google.firebase.FirebaseTooManyRequestsException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 
@@ -31,6 +32,7 @@ public class ConfirmOtpActivity extends AppCompatActivity {
     private String phoneNumber;
     private PinEntryEditText otpcode;
     private TextView resendText, successText;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +62,7 @@ public class ConfirmOtpActivity extends AppCompatActivity {
         return new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             @Override
             public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
+
                 Log.e("onVerificationCompleted", phoneAuthCredential.getSmsCode());
 
             }
@@ -132,6 +135,8 @@ public class ConfirmOtpActivity extends AppCompatActivity {
             Toast.makeText(ConfirmOtpActivity.this,"Kode dikirim ulang", Toast.LENGTH_SHORT).show();
         }
     }
+
+
 
     private void widgetListener(){
         otpcode.setOnPinEnteredListener(new PinEntryEditText.OnPinEnteredListener() {

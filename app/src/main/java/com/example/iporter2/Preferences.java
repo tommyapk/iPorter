@@ -4,13 +4,16 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
-public class SharedFreferences {
+public class Preferences {
+
 
     /** Pendeklarasian key-data berupa String, untuk sebagai wadah penyimpanan data.
      * Jadi setiap data mempunyai key yang berbeda satu sama lain */
     static final String KEY_USER_TEREGISTER ="user", KEY_PASS_TEREGISTER ="pass";
     static final String KEY_USERNAME_SEDANG_LOGIN = "Username_logged_in";
     static final String KEY_STATUS_SEDANG_LOGIN = "Status_logged_in";
+
+
 
     /** Pendlakarasian Shared Preferences yang berdasarkan paramater context */
     private static SharedPreferences getSharedPreference(Context context){

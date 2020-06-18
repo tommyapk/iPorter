@@ -98,15 +98,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.facebook.login.widget.LoginButton
-        android:id="@+id/fblogin_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_register"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="30dp" />
+<!--    <com.facebook.login.widget.LoginButton-->
+<!--        android:id="@+id/fblogin_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/tv_register"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginBottom="30dp" />-->
 
 <!--    <Button-->
 <!--        android:background="#3B5998"-->
@@ -134,5 +134,24 @@
 <!--        android:textColor="#ffffff" />-->
 </FrameLayout>
 
+    <com.google.android.gms.common.SignInButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_google"
+        android:layout_below="@+id/FrameLayout1"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/btn_logoutgoogle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_google"
+        android:background="@drawable/btn_custom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:visibility="invisible"
+        android:textColor="@android:color/white"
+        android:text="LOGOUT"/>
 
 </RelativeLayout>
