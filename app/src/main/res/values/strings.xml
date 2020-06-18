@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">iPorter2</string>
+    <string name="rute">Rute</string>
+    <string name="chat">Chat</string>
+    <string name="troli">Troli</string>
+    <string name="akun">Akun</string>
+    <string name="facebook_app_id">1194247524257057</string>
+    <string name="fb_login_protocol_scheme">fb1194247524257057</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

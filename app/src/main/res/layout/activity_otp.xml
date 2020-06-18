@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OtpActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+
+            android:src="@drawable/bg_logo"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo"
+            android:layout_marginLeft="25dp"
+            android:textColor="#F6F3F3"
+            android:layout_marginBottom="5dp"
+            android:text="Register"
+            android:textSize="50sp" />
+    </RelativeLayout>>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login Via Telpon"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/phone_text"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_height="50dp"
+        android:hint="Nomor Telpon"
+        android:inputType="phone"
+        android:paddingLeft="10dp"
+        android:background="@drawable/et_custom"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Kirim Kode OTP"
+        android:layout_marginHorizontal="10dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btn_custom"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RuteFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/bg"
+        android:src="@drawable/bg_logo"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:drawablePadding="10dp"
+        android:id="@+id/et_search"
+        android:drawableLeft="@drawable/ic_search"
+        android:background="@drawable/btn_search"
+        android:hint="Search Trip" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recyler_view"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/bg"
+        android:layout_marginBottom="70dp"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchorGravity="bottom|right|end"
+        android:src="@drawable/ic_add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="70dp"
+        app:fabSize="normal"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:id="@+id/fab1"/>
+
+</RelativeLayout>

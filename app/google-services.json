@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "686964425314",
+    "firebase_url": "https://iporter-8830d.firebaseio.com",
+    "project_id": "iporter-8830d",
+    "storage_bucket": "iporter-8830d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686964425314:android:7cbfebad98aa422077473b",
+        "android_client_info": {
+          "package_name": "com.example.iporter2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686964425314-88h0p2md7n82mi4k91bcfd20ocs2o2th.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.iporter2",
+            "certificate_hash": "8ec39dcb4ad9865a46f5a032bae8a8ef505a4dae"
+          }
+        },
+        {
+          "client_id": "686964425314-em202ece1en2rri1brf7gevkkq18usv0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCloKEiQc7CJZzdJ2ceaLrWVxXXbp8ekpk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686964425314-em202ece1en2rri1brf7gevkkq18usv0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/bg_postalert"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Posting Perjalanan"
+        android:paddingTop="20dp"
+        android:background="@drawable/bg_logo"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="30dp"
+        android:textSize="30dp"/>
+    <EditText
+        android:id="@+id/et_dari"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Dari"
+        android:padding="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="10dp"
+        android:textColorHint="@color/colorPrimary"
+        android:inputType="text"
+        android:background="@drawable/et_custom"
+        android:textSize="15sp" />
+    <EditText
+        android:id="@+id/et_tujuan"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Tujuan"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="15dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:inputType="text"
+        android:background="@drawable/et_custom"
+        android:textSize="15sp" />
+    <EditText
+        android:id="@+id/et_namaporter"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Nama Lengkap"
+        android:padding="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:inputType="text"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/et_custom"
+        android:textSize="15sp" />
+    <EditText
+        android:id="@+id/et_datetrip"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="Tanggal Keberangkatan"
+        android:padding="15dp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:inputType="datetime"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/et_custom"
+        android:textSize="15sp" />
+
+</LinearLayout>
