@@ -44,19 +44,9 @@ public class RegisterActivity extends AppCompatActivity {
         tvlogin = findViewById(R.id.tv_login);
         btnregister = findViewById(R.id.btn_register);
 
-        databaseReference =FirebaseDatabase.getInstance().getReference("DbManager");
 
-        /* Menjalankan Method razia() jika merasakan tombol SignUp di keyboard disentuh */
-        etpass.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
-                if (actionId == EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_NULL) {
-                    razia();
-                    return false;
-                }
-                return false;
-            }
-        });
+
+
         mAuth = FirebaseAuth.getInstance();
 
         tvlogin.setOnClickListener(new View.OnClickListener() {
@@ -101,16 +91,16 @@ public class RegisterActivity extends AppCompatActivity {
                                         progressDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
                                         // Sign in success, update UI with the signed-in user's information
                                         DbManager dbuser = new DbManager(username, nama, email, pass);
-                                         FirebaseDatabase.getInstance().getReference("DbManager")
-                                                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                                 .setValue(dbuser).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                             @Override
-                                             public void onComplete(@NonNull Task<Void> task) {
-                                                 Toast.makeText(RegisterActivity.this, "Register Berhasil", Toast.LENGTH_LONG).show();
-                                                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                                                 finish();
-                                             }
-                                         });
+                                        FirebaseDatabase.getInstance().getReference("DbManager")
+                                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                                .setValue(dbuser).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                Toast.makeText(RegisterActivity.this, "Register Berhasil", Toast.LENGTH_LONG).show();
+                                                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                                                finish();
+                                            }
+                                        });
 //                                        FirebaseUser user = mAuth.getCurrentUser();
 //                                        Toast.makeText(RegisterActivity.this, "Register Berhasil",
 //                                                Toast.LENGTH_SHORT).show();
@@ -119,6 +109,7 @@ public class RegisterActivity extends AppCompatActivity {
 //                                        finish();
                                     } else {
                                         // If sign in fails, display a message to the user.
+
                                         Toast.makeText(RegisterActivity.this, "Register Gagal",
                                                 Toast.LENGTH_SHORT).show();
                                     }
@@ -134,6 +125,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
+
     }
 
     /** Men-check inputan User dan Password dan Memberikan akses ke MainActivity */
@@ -191,8 +183,6 @@ public class RegisterActivity extends AppCompatActivity {
         }else{
             Preferences.setRegisteredUser(getBaseContext(),ambiluser);
             Preferences.setRegisteredPass(getBaseContext(),ambilpass);
-
-            finish();
         }
     }
 
