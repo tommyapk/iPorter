@@ -1,8 +1,10 @@
-package com.example.iporter2;
+package com.example.iporter2.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.iporter2.R;
 
 public class DiterimaActivity extends AppCompatActivity {
 

@@ -13,24 +13,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NewPassActivity"></activity>
-        <activity android:name=".GantiPassActivity" />
-        <activity android:name=".EditNamaActivity" />
-        <activity android:name=".DetailProfilActivity" />
-        <activity android:name=".DiterimaActivity" />
-        <activity android:name=".KirimActivity" />
-        <activity android:name=".ProsesActivity" />
-        <activity android:name=".BayarActivity" />
-        <activity android:name=".ConfirmOtpActivity" />
-        <activity android:name=".OtpActivity" />
-        <activity android:name=".ChatActivity" />
-        <activity android:name=".DetailActivity" />
+        <activity android:name=".activity.NewPassActivity"></activity>
+        <activity android:name=".activity.GantiPassActivity" />
+        <activity android:name=".activity.EditNamaActivity" />
+        <activity android:name=".activity.DetailProfilActivity" />
+        <activity android:name=".activity.DiterimaActivity" />
+        <activity android:name=".activity.KirimActivity" />
+        <activity android:name=".activity.ProsesActivity" />
+        <activity android:name=".activity.BayarActivity" />
+        <activity android:name=".activity.ConfirmOtpActivity" />
+        <activity android:name=".activity.OtpActivity" />
+        <activity android:name=".activity.ChatActivity" />
+        <activity android:name=".activity.DetailActivity" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".activity.HomeActivity"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".activity.RegisterActivity" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".activity.LoginActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

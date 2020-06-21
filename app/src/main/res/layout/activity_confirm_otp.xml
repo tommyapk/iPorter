@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ConfirmOtpActivity"
+    tools:context=".activity.ConfirmOtpActivity"
     android:gravity="center_vertical">
 
     <com.alimuzaffar.lib.pin.PinEntryEditText

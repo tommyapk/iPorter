@@ -1,8 +1,6 @@
-package com.example.iporter2;
+package com.example.iporter2.model;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +11,10 @@ import android.widget.Toast;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.nio.charset.IllegalCharsetNameException;
+import com.example.iporter2.R;
+import com.example.iporter2.activity.ChatActivity;
+import com.example.iporter2.activity.DetailActivity;
+
 import java.util.ArrayList;
 
 public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.MahasiswaViewHolder> {

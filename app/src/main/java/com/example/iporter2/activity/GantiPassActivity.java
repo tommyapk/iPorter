@@ -1,4 +1,4 @@
-package com.example.iporter2;
+package com.example.iporter2.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -10,32 +10,31 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class NewPassActivity extends AppCompatActivity {
+import com.example.iporter2.R;
 
-    private EditText oldpass,newpass;
-    private TextView back_set_pass;
-    private Button atur_ulang;
+public class GantiPassActivity extends AppCompatActivity {
+
+    private EditText inputpass;
+    private TextView tvback;
+    private Button lanjut;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_pass);
+        setContentView(R.layout.activity_ganti_pass);
 
-        oldpass = findViewById(R.id.et_oldpass);
-        newpass = findViewById(R.id.et_newpass);
-        atur_ulang = findViewById(R.id.btn_aturulang);
+        inputpass = findViewById(R.id.et_inpass);
+        lanjut = findViewById(R.id.btn_lanjut);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle("");
 
-        atur_ulang.setOnClickListener(new View.OnClickListener() {
+        lanjut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),DetailProfilActivity.class));
-                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+                startActivity(new Intent(GantiPassActivity.this,NewPassActivity.class));
                 finish();
-
             }
         });
 
