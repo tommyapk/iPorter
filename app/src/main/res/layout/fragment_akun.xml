@@ -6,31 +6,240 @@
     tools:context=".RuteFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="100dp"
+    <ImageView
+        android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_above="@id/tv_emaillogin"
+        android:id="@+id/bg_akun"
+        android:src="@drawable/bg_logo"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/img_profil"
         android:layout_marginBottom="10dp"
-        android:src="@drawable/ic_person_black_24dp"
-        android:layout_centerHorizontal="true"/>
+        android:src="@drawable/ic_person_black_24dp"/>
+    <Button
+        android:layout_width="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="30dp"
+        android:clickable="true"
+        android:focusable="true"
+        style="@style/Widget.AppCompat.Button"
+        android:background="@drawable/ic_settings"
+        android:layout_alignParentRight="true" />
     <TextView
         android:id="@+id/tv_emaillogin"
         android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/akun"
-        android:textSize="20dp"/>
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/white"
+        android:layout_toRightOf="@id/img_profil"
+        android:text="Tommy Daramwansyah"
+        android:textSize="15dp"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:id="@+id/cv_pesnanan"
+        android:layout_below="@id/bg_akun">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pesanan Saya"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tv_pesanan"
+                android:textSize="15dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/black"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tv_pesanan"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="85dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        style="?borderlessButtonStyle"
+                        android:foreground="@drawable/ripple_effect"
+                        android:id="@+id/btn_bayar"
+
+                        android:textStyle="bold"
+                        android:background="@drawable/ic_belumbayar" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Belum\nBayar"
+                        android:textSize="13dp"
+                        android:gravity="center"
+                        android:id="@+id/tv_bayar"
+                        android:textColor="@color/ic_color"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="85dp"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/ripple_effect"
+                    android:layout_height="80dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/btn_proses"
+                        android:textStyle="bold"
+                        android:clickable="true"
+                        android:focusable="true"
+                        style="?borderlessButtonStyle"
+                        android:foreground="@drawable/ripple_effect"
+                        android:background="@drawable/ic_proses" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dalam\nProses"
+                        android:textSize="13dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/tv_bayar1"
+                        android:textColor="@color/ic_color"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="85dp"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:layout_height="80dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/ripple_effect"
+                    android:orientation="vertical">
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/btn_dikirim"
+                        style="?borderlessButtonStyle"
+                        android:foreground="@drawable/ripple_effect"
+                        android:textStyle="bold"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="@drawable/ic_dikirim" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dalam\nPengiriman"
+                        android:gravity="center"
+                        android:textSize="13dp"
+                        android:id="@+id/tv_bayar2"
+                        android:textColor="@color/ic_color"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="85dp"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/ripple_effect"
+                    android:layout_height="80dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/btn_diterima"
+                        style="?borderlessButtonStyle"
+                        android:foreground="@drawable/ripple_effect"
+                        android:textStyle="bold"
+                        android:background="@drawable/ic_diterima" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pesanan\nDibatalkan"
+                        android:textSize="13dp"
+                        android:gravity="center"
+                        android:id="@+id/tv_bayar3"
+                        android:textColor="@color/ic_color"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:id="@+id/cv_infoakun"
+        android:layout_below="@id/cv_pesnanan"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:id="@+id/tv_infoakun"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/ripple_effect"
+            android:textSize="15sp"
+            android:text="Informasi Akun"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/ic_color"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/ripple_effect"
+            android:textSize="15sp"
+            android:text="Daftar Titipan"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/ic_color"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/ripple_effect"
+            android:id="@+id/tv_pengaturan"
+            android:textSize="15sp"
+            android:text="Pusat Bantuan"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/ic_color"/>
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
     <Button
         android:id="@+id/btn_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_emaillogin"
+        android:layout_below="@id/cv_infoakun"
         android:background="@drawable/btn_custom"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="30dp"
+        android:foreground="@drawable/ripple_effect"
         android:textColor="@android:color/white"
         android:text="LOGOUT"/>
 

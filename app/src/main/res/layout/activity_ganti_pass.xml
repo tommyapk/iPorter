@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GantiPassActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:text="Masukkan Password"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:layout_marginHorizontal="25sp"
+        android:fontFamily="sans-serif-light"
+        android:text="Untuk mengamankan akunmu, silahkan verifikasi\nidentitas dengan memasukkan password"/>
+    <com.maksim88.passwordedittext.PasswordEditText
+        android:id="@+id/et_inpass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:layout_marginHorizontal="25sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="20sp"
+        android:padding="15dp"
+        android:inputType="textPassword"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_centerInParent="true"
+        android:background="@drawable/et_custom"
+        android:textSize="15sp" />
+    <Button
+        android:id="@+id/btn_lanjut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_custom"
+        android:layout_marginHorizontal="25sp"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/white"
+        android:text="LANJUT"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="30sp"
+        android:textSize="15sp"
+        android:layout_marginHorizontal="25sp"
+        android:fontFamily="sans-serif-light"
+        android:text="Lupa password?"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:layout_marginHorizontal="25sp"
+        android:fontFamily="sans-serif-light"
+        android:text='Silahkan Log out dari akunmu dan pilih \"Lupa Password\" di Halaman Log in. untuk log out,Akun > Log out.'/>
+</LinearLayout>

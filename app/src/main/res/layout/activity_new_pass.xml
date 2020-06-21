@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NewPassActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:text="Ganti Password"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary" />
+    </androidx.appcompat.widget.Toolbar>
+    <com.maksim88.passwordedittext.PasswordEditText
+        android:id="@+id/et_oldpass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Old Password"
+        android:layout_marginHorizontal="30sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="50sp"
+        android:padding="15dp"
+        android:inputType="textPassword"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_centerInParent="true"
+        android:background="@drawable/et_custom"
+        android:textSize="15sp" />
+    <com.maksim88.passwordedittext.PasswordEditText
+        android:id="@+id/et_newpass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="New Password"
+        android:layout_marginHorizontal="30sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="10sp"
+        android:padding="15dp"
+        android:inputType="textPassword"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_centerInParent="true"
+        android:background="@drawable/et_custom"
+        android:textSize="15sp" />
+    <Button
+        android:id="@+id/btn_aturulang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_custom"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="20sp"
+        android:textColor="@android:color/white"
+        android:text="ATUR ULANG"/>
+</LinearLayout>

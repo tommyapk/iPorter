@@ -270,8 +270,6 @@ public class LoginActivity extends AppCompatActivity {
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
         if (account != null){
             googlelogout.setVisibility(View.VISIBLE);
-            String personName = account.getDisplayName();
-            Toast.makeText(this, personName, Toast.LENGTH_SHORT).show();
         }
     }
 
