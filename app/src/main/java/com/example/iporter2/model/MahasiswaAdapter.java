@@ -8,18 +8,31 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.iporter2.R;
 import com.example.iporter2.activity.ChatActivity;
 import com.example.iporter2.activity.DetailActivity;
+import com.example.iporter2.fragment.RuteFragment;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.firebase.ui.database.SnapshotParser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.MahasiswaViewHolder> {
 
     private ArrayList<Mahasiswa> dataList;
+
 
 
     public MahasiswaAdapter(ArrayList<Mahasiswa> dataList) {
@@ -31,8 +44,6 @@ public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.Maha
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View view = layoutInflater.inflate(R.layout.activity_listview, parent, false);
         return new MahasiswaViewHolder(view);
-
-
     }
 
     @Override
@@ -88,6 +99,8 @@ public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.Maha
             call = itemView.findViewById(R.id.btn_call);
             chat = itemView.findViewById(R.id.btn_chat);
             cardView = itemView.findViewById(R.id.card_view);
+
         }
     }
+
 }

@@ -13,6 +13,7 @@ public class Mahasiswa {
 
     }
 
+
     public String getNama() {
         return nama;
     }

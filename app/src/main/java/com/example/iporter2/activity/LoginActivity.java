@@ -40,7 +40,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity {
     private Button btnlogin,fb,fblogout,googlelogout;
-    private TextView tvregister, logintelp;
+    private TextView tvregister, logintelp,forgotpass;
     private EditText username,pass;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -64,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
         logintelp = findViewById(R.id.login_notelp);
         signInButton = findViewById(R.id.btn_google);
         googlelogout = findViewById(R.id.btn_logoutgoogle);
-
+        forgotpass = findViewById(R.id.tv_forgotpass);
         mAuth = FirebaseAuth.getInstance();
 
 
@@ -103,6 +103,15 @@ public class LoginActivity extends AppCompatActivity {
                 String user = username.getText().toString();
                 String password = pass.getText().toString();
 
+                //initialize
+                progressDialog = new ProgressDialog(LoginActivity.this);
+                //show
+                progressDialog.show();
+                //set contentview
+                progressDialog.setContentView(R.layout.progress_dialog);
+                //set transparent background
+                progressDialog.getWindow().setBackgroundDrawableResource(
+                        android.R.color.transparent);
                 if (user.equals("")){
                     Toast.makeText(LoginActivity.this, "Lengkapi Email Anda!",Toast.LENGTH_SHORT).show();
                 }else if (password.equals("")){
@@ -113,6 +122,7 @@ public class LoginActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
+
                                         // Sign in success, update UI with the signed-in user's information
                                         Preferences.setLoggedInStatus(getBaseContext(),true);
                                         FirebaseUser user = mAuth.getCurrentUser();
@@ -121,19 +131,6 @@ public class LoginActivity extends AppCompatActivity {
                                         Intent i = new Intent(LoginActivity.this, HomeActivity.class);
                                         startActivity(i);
                                         finish();
-
-                                        //initialize
-                                        progressDialog = new ProgressDialog(LoginActivity.this);
-                                        //show
-                                        progressDialog.show();
-                                        //set contentview
-                                        progressDialog.setContentView(R.layout.progress_dialog);
-                                        //set transparent background
-                                        progressDialog.getWindow().setBackgroundDrawableResource(
-                                                android.R.color.transparent
-
-                                        );
-
                                     } else {
                                         // If sign in fails, display a message to the user.
                                         Toast.makeText(LoginActivity.this, "Email atau Password Salah",
@@ -151,6 +148,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        forgotpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, ForgotPassActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -187,12 +192,19 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
+                    progressDialog = new ProgressDialog(LoginActivity.this);
+                    //show
+                    progressDialog.show();
+                    //set contentview
+                    progressDialog.setContentView(R.layout.progress_dialog);
+                    //set transparent background
+                    progressDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
                     Preferences.setLoggedInStatus(getBaseContext(),true);
-                    startActivity(new Intent(LoginActivity.this, HomeActivity.class));
-                    finish();
                     FirebaseUser user =mAuth.getCurrentUser();
                     Toast.makeText(LoginActivity.this, "Succesfull", Toast.LENGTH_SHORT).show();
                     updateUI(user);
+                    startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                    finish();
                 }else {
                     Toast.makeText(LoginActivity.this, "Failed", Toast.LENGTH_SHORT).show();
                     updateUI(null);

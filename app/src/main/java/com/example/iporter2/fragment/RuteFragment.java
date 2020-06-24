@@ -6,7 +6,6 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
@@ -14,16 +13,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.iporter2.model.Mahasiswa;
-import com.example.iporter2.model.MahasiswaAdapter;
 import com.example.iporter2.R;
+import com.example.iporter2.model.MahasiswaAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.synnapps.carouselview.CarouselView;
+import com.synnapps.carouselview.ImageListener;
 
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEvent;
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEventListener;
-
 import java.util.ArrayList;
 
 
@@ -33,9 +34,19 @@ import java.util.ArrayList;
 public class RuteFragment extends Fragment {
 
     private RecyclerView recyclerView;
-    private MahasiswaAdapter adapter;
     private ArrayList<Mahasiswa> mahasiswaArrayList;
     private final String TAG = "HomeActivity";
+    private CarouselView carouselView;
+
+    int[] sampleImages = {R.drawable.image_1, R.drawable.image_2, R.drawable.image_3, R.drawable.image_4, R.drawable.image_5};
+//    String[] sampleNetworkImageURLs = {
+//            "https://placeholdit.imgix.net/~text?txtsize=15&txt=image1&txt=350%C3%97150&w=350&h=150",
+//            "https://placeholdit.imgix.net/~text?txtsize=15&txt=image2&txt=350%C3%97150&w=350&h=150",
+//            "https://placeholdit.imgix.net/~text?txtsize=15&txt=image3&txt=350%C3%97150&w=350&h=150",
+//            "https://placeholdit.imgix.net/~text?txtsize=15&txt=image4&txt=350%C3%97150&w=350&h=150",
+//            "https://placeholdit.imgix.net/~text?txtsize=15&txt=image5&txt=350%C3%97150&w=350&h=150"
+//    };
+
     public RuteFragment() {
         // Required empty public constructor
     }
@@ -52,24 +63,15 @@ public class RuteFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
         addData();
-
         recyclerView = (RecyclerView) view.findViewById(R.id.recyler_view);
-
-        adapter = new MahasiswaAdapter(mahasiswaArrayList);
-
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
-
-        recyclerView.setLayoutManager(layoutManager);
-
-        recyclerView.setAdapter(adapter);
-
-
+        carouselView = (CarouselView) view.findViewById(R.id.carouselView);
+        carouselView.setImageListener(imageListener);
+        carouselView.setPageCount(sampleImages.length);
         final FloatingActionButton floatingActionButton=view.findViewById(R.id.fab1);
 
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), "Floating Action Button Berhasil dibuat", Toast.LENGTH_SHORT).show();
                 showAlertDialogButtonClicked(view);
             }
         });
@@ -92,15 +94,20 @@ public class RuteFragment extends Fragment {
                         }
                     }
                 });
-
-
-
     }
+
+    ImageListener imageListener = new ImageListener() {
+        @Override
+        public void setImageForPosition(int position, ImageView imageView) {
+            imageView.setImageResource(sampleImages[position]);
+//            Picasso.get().load(sampleNetworkImageURLs[position]).placeholder(sampleImages[0]).error(sampleImages[3]).fit().centerCrop().into(imageView);
+        }
+    };
     void addData(){
         mahasiswaArrayList = new ArrayList<>();
         mahasiswaArrayList.add(new Mahasiswa("Jakarta - Makassar", "Tommy Darmawansyah", "Minggu, 31 Mei 2020"));
         mahasiswaArrayList.add(new Mahasiswa("Surabaya - Makassar", "Irsan Mansyur", "Senin, 1 Juni 2020"));
-        mahasiswaArrayList.add(new Mahasiswa("Jogja - Makassar", "Noralisa Nurdin", "Selasa, 2 Juni 2020"));
+        mahasiswaArrayList.add(new Mahasiswa("Jogja - Makassar", "Andi Wahdaniah", "Selasa, 2 Juni 2020"));
         mahasiswaArrayList.add(new Mahasiswa("Jakarta - Makassar", "Dirza Rakhmat", "Rabu, 3 Juni 2020"));
         mahasiswaArrayList.add(new Mahasiswa("Jakarta - Makassar", "Jesica Datu", "Kamis, 4 Juni 2020"));
         mahasiswaArrayList.add(new Mahasiswa("Jakarta - Maksasar", "Iga Mawarni", "Jumat, 5 Juni 2020"));
@@ -109,6 +116,7 @@ public class RuteFragment extends Fragment {
         mahasiswaArrayList.add(new Mahasiswa("Jakarta - Maksasar", "Iga Mawarni", "Jumat, 5 Juni 2020"));
 
     }
+
 
     private void showAlertDialogButtonClicked(View view) {
         // create an alert builder
@@ -126,10 +134,10 @@ public class RuteFragment extends Fragment {
                 EditText Tujuan = customLayout.findViewById(R.id.et_tujuan);
                 EditText NamePorter = customLayout.findViewById(R.id.et_namaporter);
                 EditText DateTrip = customLayout.findViewById(R.id.et_datetrip);
-                sendDialogDataToActivity(Dari.getText().toString());
-                sendDialogDataToActivity(Tujuan.getText().toString());
-                sendDialogDataToActivity(NamePorter.getText().toString());
-                sendDialogDataToActivity(DateTrip.getText().toString());
+//                sendDialogDataToActivity(Dari.getText().toString());
+//                sendDialogDataToActivity(Tujuan.getText().toString());
+//                sendDialogDataToActivity(NamePorter.getText().toString());
+//                sendDialogDataToActivity(DateTrip.getText().toString());
             }
         });
         builder.setNegativeButton("BATALKAN", new DialogInterface.OnClickListener() {
