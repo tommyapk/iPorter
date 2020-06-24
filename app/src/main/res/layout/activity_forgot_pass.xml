@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.GantiPassActivity">
+    tools:context=".activity.ForgotPassActivity">
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:id="@+id/toolbar"
@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:text="Masukkan Password"
+            android:text="Reset Password"
             android:gravity="center_vertical"
             android:textSize="20sp"
             android:textColor="@color/colorPrimary" />
@@ -26,47 +26,34 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30sp"
-        android:layout_marginHorizontal="25sp"
         android:fontFamily="sans-serif-light"
-        android:text="Untuk mengamankan akunmu, silahkan verifikasi\nidentitas dengan memasukkan password"/>
-    <com.maksim88.passwordedittext.PasswordEditText
-        android:id="@+id/et_inpass"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30sp"
+        android:layout_marginBottom="10sp"
+        android:text="Link Reset Password akan dikirimkan ke email"/>
+    <EditText
+        android:id="@+id/et_emailreset"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="Password"
-        android:layout_marginHorizontal="25sp"
-        android:textColor="@color/colorPrimary"
-        android:layout_marginTop="20sp"
+        android:hint="Masukkan Email Terdaftar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:padding="15dp"
-        android:inputType="textPassword"
+        android:textColor="@color/colorPrimary"
         android:textColorHint="@color/colorPrimary"
-        android:layout_centerInParent="true"
+        android:inputType="textEmailAddress"
         android:background="@drawable/et_custom"
         android:textSize="15sp" />
     <Button
-        android:id="@+id/btn_lanjut"
+        android:id="@+id/btn_resetpass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/btn_custom"
-        android:layout_marginHorizontal="25sp"
-        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
         android:textColor="@android:color/white"
-        android:text="LANJUT"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:layout_marginTop="30sp"
-        android:textSize="15sp"
-        android:layout_marginHorizontal="25sp"
-        android:fontFamily="sans-serif-light"
-        android:text="Lupa password?"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="10sp"
-        android:layout_marginHorizontal="25sp"
-        android:fontFamily="sans-serif-light"
-        android:text='Silahkan Log out dari akunmu dan pilih \"Lupa Password\" di Halaman Log in. untuk log out,Akun > Log out.'/>
+        android:text="Reset Password"/>
+
 </LinearLayout>

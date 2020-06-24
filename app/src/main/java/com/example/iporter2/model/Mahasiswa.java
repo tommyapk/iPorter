@@ -1,4 +1,4 @@
-package com.example.iporter2;
+package com.example.iporter2.model;
 
 public class Mahasiswa {
 
@@ -12,6 +12,7 @@ public class Mahasiswa {
         this.nohp = nohp;
 
     }
+
 
     public String getNama() {
         return nama;

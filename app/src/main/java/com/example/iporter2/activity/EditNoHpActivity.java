@@ -1,14 +1,16 @@
-package com.example.iporter2;
+package com.example.iporter2.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class DiterimaActivity extends AppCompatActivity {
+import com.example.iporter2.R;
+
+public class EditNoHpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diterima);
+        setContentView(R.layout.activity_edit_no_hp);
     }
 }

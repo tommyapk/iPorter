@@ -1,4 +1,4 @@
-package com.example.iporter2;
+package com.example.iporter2.model;
 
 public class DbManager {
 

@@ -1,4 +1,4 @@
-package com.example.iporter2;
+package com.example.iporter2.sharedpreference;
 
 import android.content.Context;
 import android.content.SharedPreferences;

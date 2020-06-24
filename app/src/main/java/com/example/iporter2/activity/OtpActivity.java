@@ -1,4 +1,4 @@
-package com.example.iporter2;
+package com.example.iporter2.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.iporter2.R;
 
 public class OtpActivity extends AppCompatActivity {
 

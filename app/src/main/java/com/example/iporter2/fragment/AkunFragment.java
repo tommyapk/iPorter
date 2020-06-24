@@ -1,29 +1,27 @@
-package com.example.iporter2;
+package com.example.iporter2.fragment;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.google.android.gms.auth.api.Auth;
+import com.example.iporter2.activity.BayarActivity;
+import com.example.iporter2.activity.DetailProfilActivity;
+import com.example.iporter2.activity.DiterimaActivity;
+import com.example.iporter2.activity.KirimActivity;
+import com.example.iporter2.activity.LoginActivity;
+import com.example.iporter2.sharedpreference.Preferences;
+import com.example.iporter2.activity.ProsesActivity;
+import com.example.iporter2.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -83,7 +81,7 @@ public class AkunFragment extends Fragment {
                 //Menghapus Status login dan kembali ke Login Activity
                 Preferences.clearLoggedInUser(getActivity().getBaseContext());
                 Toast.makeText(getActivity(), "Berhasil Logout", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getActivity().getBaseContext(),LoginActivity.class));
+                startActivity(new Intent(getActivity().getBaseContext(), LoginActivity.class));
                 getActivity().finish();
 
 //                firebaseAuth.getInstance().signOut();
